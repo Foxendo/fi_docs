@@ -1,7 +1,7 @@
 # This is Fi.
 <img src="assets/filogo.png" width="25%" align="center"/>
 
-Fi is a bot that has a pretty wide spectrum of functions, but the main ones, one way or another, are connected to large language models (LLMs). So that's what this documentation will talk about.
+Fi is a bot that has a pretty big amount of functions, but the main ones, one way or another, are connected to large language models (LLMs). So that's what this documentation will talk about.
 
 If you have any questions even after reading this, try to check the necessary command through `fi help (command)`, or just `fi help`.
 
