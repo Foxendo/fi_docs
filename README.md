@@ -34,7 +34,7 @@ You can also address Fi in two more ways:
 <br clear="both"/>
 
 > [!NOTE]
-> When addressing Fi in any way other than by using `fi chat`, it will not remember anything except your current message and the message, that you replied to (if any). So to have a dialogue its better to use `fi chat`.
+> When addressing Fi in any way other than by using `fi chat`, it will not remember anything except your current message and the message that you replied to (if any). So to actually partake in a dialogue its better to use `fi chat`.
 
 `fi chat` is a command that allows you to start a dialogue with Fi, where it will remember all the messages, and you won't have to type any extra prefixes when chatting. There's an additional argument `private` (the whole command will be `fi chat private`), in which instead of starting a dialogue in the same channel, Fi will create a new thread, where you can chat with it.
 
