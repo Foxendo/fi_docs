@@ -1,7 +1,7 @@
 # This is Fi.
 <img src="assets/filogo.png" width="25%" align="center"/>
 
-Fi is a bot that has a pretty wide spectrum of functions, but the main ones, one way or another, are connected to language models. So that's what this documentation will talk about.
+Fi is a bot that has a pretty wide spectrum of functions, but the main ones, one way or another, are connected to large language models (LLMs). So that's what this documentation will talk about.
 
 If you have any questions even after reading this, try to check the necessary command through `fi help (command)`, or just `fi help`.
 
@@ -16,101 +16,104 @@ If you have any questions even after reading this, try to check the necessary co
 * [Final additions](#final-additions)
 
 # Ways to chat with Fi
-К Фи можно обратиться двумя разными способами, и в одном случае это будет команда, а в другом - _одноразовое_ обращение к языковой модели.
+You can ask Fi anything using two different methods. In first case it's going to be a command, while in second it would be a _singular_ request to the LLM.
 
-Пример команды: `fi chat` , где `fi` - префикс, а `chat` - команда.
+Command example: `fi chat`, where `fi` is the prefix, and `chat` is the command.
 
-Примеры обращения: `Фи, привет!`, `Hello, Fi.` или `@Fi Че кого?`  
-Как видно - обращения всегда через запятую, или уже конкретным упоминанием Фи (через @), иначе она просто проигнорит ваши попытки заговорить.
+Request examples: `Fi, hello!`, `Hi, Fi.` or `@Fi wassup!`
 
-Но также к Фи можно обратиться ещё двумя способами:
-1. Ответить на любое сообщение Фи, при этом отметив её. В этом случае она ответит вне зависимости от того, написали ли вы "Фи," или нет. Так же, в данном случае, она учтет контекст того сообщения, на которое вы ответите.
-<img src="assets/example1.png" width="50%" height="50%" align="center"/>
+As you can see, the requests are either using a comma, or specifically mention Fi (through @), otherwise it's going to ignore your attempts to chat.
+
+You can also address Fi in two more ways:
+1. By replying to any message of Fi, mentioning it. In this case it will respond regardless of if you wrote "Fi," or not. Also, it will consider the context of the message you responded to.
+<img src="assets/example1.png" width="75%" height="75%" align="center"/>
 <br clear="both"/>
 
-2. Ответить на сообщение любого человека, и отметить Фи - либо через @Fi, либо через "Фи,". В этом случае она так же учтет контекст того сообщения, на которое вы отвечаете.
+2. Reply to a message of any person, and mention Fi - either through @Fi, or "Fi,". In this case it will also consider the context of the message you're responding to.
 <img src="assets/example2.png" width="75%" height="75%" align="center"/>
 <br clear="both"/>
 
-|❗Учтите❗|
-|:----| 
-| При обращении к Фи любыми способами, кроме как через команду `fi chat`, она не будет помнить ничего, кроме вашего текущего сообщения и сообщения, на которое вы отвечаете (если таковое есть). Поэтому для конструктивного диалога всегда используйте `fi chat`. |
+> [!NOTE]
+> When addressing Fi in any way other than by using `fi chat`, it will not remember anything except your current message and the message, that you replied to (if any). So to have a dialogue its better to use `fi chat`.
 
-`fi chat` является командой, которая позволяет вам начать диалог с Фи, где она будет помнить все сообщения, а вам не нужно будет никак обращаться к ней по-особенному. Имеется дополнительный аргумент `private` (т.е. полная команда будет звучать как `fi chat private`), при котором вместо того, чтобы начинать диалог на том же канале, где вы находитесь, Фи создаст новый, приватный тред (тему), где вы сможете с ней общаться.
+`fi chat` is a command that allows you to start a dialogue with Fi, where it will remember all the messages, and you won't have to type any extra prefixes when chatting. There's an additional argument `private` (the whole command will be `fi chat private`), in which instead of starting a dialogue in the same channel, Fi will create a new thread, where you can chat with it.
 
 <br clear="both"/>
 <img src="assets/example3.png" width="50%" height="50%" align="center"/>
 <br clear="both"/>
 
-Как видно, Фи помнит все сообщения.  
-`quit` здесь служит одной из подкоманд, о которых ниже.
+As you can see, Fi remembers all the messages. 
+`quit` here is one of the subcommands, which will be discussed below.
 
-Одна дополнительная возможность `fi chat` в том, что вы можете ответить на какое-либо сообщение Фи (только Фи), написав при этом `fi chat`. Это создаст новый чат, в котором Фи будет помнить то сообщение, на которое вы ответили, и то сообщение, на которое ответила Фи.
-К примеру, если вы напишите "Привет", Фи ответит "Здравствуйте", а вы ответите на ее сообщение, написав `fi chat`, то она будет помнить оба этих сообщения, и вы сможете продолжить диалог.
+One additional feature of `fi chat` is that you can reply to any message written by Fi (and only Fi), sending `fi chat`. It will start a new chat, in which Fi will remember the message you replied to, and the message Fi replied to originally.  
+
+For example, if you write "Hello", Fi responds with "Hi", and then you reply to it's message with `fi chat`, it will remember both of the messages ("Hello" and "Hi"), and you can continue the dialogue.
 
 # Subcommands
 
-|❗Уточнение❗|
-|:---|
-| Cледующие "обращения" к Фи не относится к двум основным (через префикс `fi` или через запятую), т.к. являются подкомандами. Поэтому используйте их без префиксов, и без запятых. |
-| К примеру, в случае с `stop` не пишите `fi stop` или `Fi, stop`, а просто напишите `stop` |
+> [!NOTE]
+> Next "addressals" of Fi aren't related to the main two (using the prefix `fi` or a comma), because they are subcommands. Use them without prefixes and commas.  
+> For example in case of `stop` you shouldn't write `fi stop` or `Fi, stop`, and instead just write `stop`
 
+- `regen`: If Fi writes a message, but you don't like it, you can type `regen`. Right after that Fi will rewrite the message.
 
-- `regen`: После того, как Фи написала какое-либо сообщение, но оно вам не понравилось по какой-либо причине, вы можете написать `regen`. Сразу после этого, Фи перепишет сообщение.  
-(**Примечание**: по умолчанию у Фи стоит достаточно низкая температура (а именно 0.3), поэтому сообщение, скорее всего, не будет сильно отличаться. Об этом позже, в [кастомизации](#кастомизация).)
-Также, отмечу, что перед написанием `regen`, вы можете отредактировать ваше сообщение, после чего Фи учтет изменения в сообщении, и уже, в зависимости от них, может ответить вообще по-другому.
+> [!NOTE]
+> By default, Fi has a pretty low temperature (0.3), so the new message probably wont be much different. It will be discussed later, in [customization](#customization).  
+> Also worth nothing that before writing `regen` you may edit your message, and Fi will consider the new changes, and may reply to you in a completely different way.
 
-- `stop`: Если Фи очень долго пишет сообщение, и вам надоело ждать, напишите `stop`. Это остановит написание сообщения. Далее вы можете уже написать `regen`, или продолжить диалог с незаконченным сообщением от Фи (действуйте по усмотрению).
-  
-- `quit` (только в `fi chat`): Если хотите закончить диалог с Фи, напишите `quit`.
+- `stop`: If Fi is taking too long to write something, and you can't wait anymore, write `stop`. It will stop Fi. After that you may type `regen`, or continue the dialogue with an unfinished message from Fi (act according to your needs).
+
+- `quit` (only in `fi chat`): If you want to stop chatting with Fi, type `quit`.
 
 # Additional functionalities
 
-Фи, по умолчанию, умеет только переписываться. Это было сделано для того, чтобы Фи не использовала ненужных инструментов, когда не надо. Это можно поменять ([следующая глава](#кастомизация)).
+Fi, by default, can only chat. It was made like that so Fi doesn't use any unnecessary tools. You can change that ([next chapter](#customization)).
 
-Фи умеет смотреть файлы (PDF, TXT, DOCX). Просто прикрепите их вместе со своим сообщением. Учтите, что из-за того, что Фи хостится на видеокарте студента, которая вот-вот сгорит, максимальный контекст (память) Фи был поставлен на 8192. Этого хватит для документа в, примерно, 30000 символов.
+Fi is able to look at files (PDF, TXT, DOCX). Just attach them with your message. Do know though, that because Fi is hosted on my GPU, max context (memory) of Fi was set to 8192. Its enough for documents that are around 30000 characters big.
 
-Одна из моделей Фи (3 модель [здесь](#кратко-о-моделях)) умеет анализировать картинки. Также пришлите их вместе со своим сообщением, или, если по какой-то причине сами фотографии не присылаются, добавьте ссылку на фотографию в конце сообщения, вот так: `image:(url)`. При этом, все сообщение будет выглядить примерно так: `Фи, посмотри фоточку. image:(url)`. Если текущая модель не умеет анализировать картинки, Фи об этом напишет, попрося поменять на нужную модель.
+One of the models of Fi (3rd [here](#about-models)) is able to analyze pictures. Also attach them with your message, or if the pictures aren't attaching, try adding a link to the pic in the end of the message like so: `image:(link)`. The message will look something like this: `Fi, look at this. image:(link)`. If the current model can't look at images, Fi will tell you about it.
 
 ## Tools
 
-Также имеются инструменты, такие как **поиск в интернете**, **WolframAlpha** и **интерпретатор кода**:
-  - Поиск - Фи ищет нужное количество страниц нужного запроса (от 1 до 4), далее суммирует всю информацию, выдает вам (с источниками), и запоминает все, что суммировала, сама. Работает надежно.
-  - Wolfram - просто отсылает какой-либо пример в WolframAlpha, и получает ответ. Работает относительно надежно.
-  - Интерпретатор кода - Фи старается писать код на Python, и старается получить какой-то вывод. Это может быть число, строка, график, и т.д. **Работает НЕНАДЕЖНО**, отключайте если он вам не нужен.
+There's also tools, such as **web search**, **WolframAlpha** and **code interpreter**:
+  - Search - Fi looks up a couple pages of a certain query (1-4), then summarizes all the info and gives you the answer with sources, while remembering everything. Reliable.
+  - Wolfram - sends a query to WolframAlpha and gets a response. Pretty reliable.
+  - Code Interpreter - Fi tries to write Python code and tries to get a result. It can be a number, text, a graph, etc. **UNRELIABLE**, turn it off if you don't need it.
 
-То, как их поменять, написано в [следующей главе. (`fi tools`)](#кастомизация)
+You can find how to change them in the [next chapter. (`fi tools`)](#customization)
 
 # Customization
 
-Через такие команды как `fi mode`, `fi tools`, `fi personality` можно кастомизировать Фи под себя. Есть еще более глобальная команда, `fi modelswitch`, которая поменяет модель. Она поменяется для всех, т.к вышеупомянутый студент не может позволить себе запускать все модели сразу.
+Through commands like `fi mode`, `fi tools`, `fi personality` you can customize Fi to suit your needs. There's a more global command, `fi modelswitch`, which will change the model. It will change for everyone, since I can't afford to run all the models at once.
 
-- `fi mode` - Меняет режим, т.е. температуру, т.е "случайность" Фи. Есть 4 режима, от случайного к менее случайному: `very creative` - температура в 5.0, `creative` - температура в 1.5, `precise` - температура в 0.3, и `literal` - температура в 0.1 . Советую использовать только `creative` и `precise`. Можно поменять как написав команду с нужным режимом (`fi mode precise`), так и просто написать `fi mode`, а потом вам выведется список с режимами, и вы напишете только нужную цифру, например `1` (что будет соответствовать `very creative`).
-- `fi tools` - Подключает различные [инструменты](#инструменты). Они подключаются вводя нужную комбинацию + и -. К примеру, в данный момент порядок такой: поиск, Wolfram, интерпретатор. Если я хочу включить только поиск, я напишу `fi tools +--`. Но так же эту команду можно вводить и без аргументов, просто введя `fi tools`. Потом выведется список со всеми инструментами, и там уже можете ввести нужную комбинацию. (Помните, без `fi`, а просто, условно, `++-`.)  
-- `fi personality` - Служит для изменения системного промпта (характера) Фи, а так же имени и аватарки под себя. Учтите, что при изменении имени и аватарки, некоторые функции МОГУТ работать криво.  
-Просто впишите `fi personality`, а дальше Фи вас проинструктирует.
-- `fi modelswitch` - Служит для изменения модели. Введите команду, и вам выдастся список моделей. На данный момент их 3 - Qwen, QwQ и MiniCPM. Qwen - стандартная, работает быстро и хорошо. QwQ - очень медленная, и думает очень долго, но лучше всего решает задачи на логику. MiniCPM - худшая из всех, не поддерживает системный промпт (характер), но может читать картинки, и делает это даже на уровне платных моделей, типа ChatGPT.
+- `fi mode` - Changes the mode, i.e. temperature, i.e. the `randomness` of Fi. There are 4 modes, from random to less random: `very creative` - temperature at 5.0, `creative` - temperature at 1.5, `precise` - temperature at 0.3, and `literal` - temperature at 0.1 . I recommend using only `creative` and `precise`. You can change the mode by writing a command with a needed mode (`fi mode precise`), or just write `fi mode`, and then you will see a list of modes, after which you choose the needed number, for example `1` (which will correspond to `very creative`).
+- `fi tools` - Changes various [tools](#tools). They are changed by entering the desired combination of + and -. For example, at the moment the order is: search, Wolfram, interpreter. If I want to enable only search, I would write `fi tools +--`. But you can also enter this command without arguments, just by typing `fi tools`. Then a list with all the tools will be displayed, and you can enter the desired combination there. (Remember, without `fi`. Just `++-`.)
+- `fi personality` - Changes the system prompt (personality) of Fi, as well as the name and avatar. Please note that with a changed name and avatar, some functions MAY stop working properly.  
+Just type in `fi personality` and Fi will instruct you from there.
+- `fi modelswitch` - Used to change the model. Type the command and you will be given a list of models. Currently there are 3 - Qwen, QwQ and MiniCPM. Qwen is the standard one, it works fast and well. QwQ is very slow and takes a long time to think, but is best at solving problems that require logic. MiniCPM is the worst of all, it doesn't support system prompt (character), but it can read pictures, and does it at the level of paid models like GPT-4o.
 
 # About models
-Как уже было сказано выше, Фи включает в себя 3 основные модели, а именно:
-1. `Qwen2.5-14b`. Эта модель, примерно, сопоставима с GPT-4o-mini, т.е тем, на который переключается ChatGPT после 16 сообщений. Всегда правильно использует [инструменты](#инструменты), очень хорошо слушает ваши инструкции и работает относительно быстро (20 токенов в секунду).
-2. `QwQ-32b`. Эта модель, вообще, сопоставима с o1-mini, так же модель ChatGPT, только уже полностью платная. Может тупить при использовании инструментов, очень неуверенная, но из-за своего механизма "обдумывания", который может занимать до 30 минут, намного чаще приходит к правильному ответу, чем модель 1. Бывает, что неправильно понимает сам вопрос, поэтому старайтесь писать его как можно понятнее. Ответ иногда может быть либо на китайском, либо на английском, это уже фишка модели, поэтому будьте готовы его перевести (можете воспользоваться уже первой моделью, либо обычным переводчиком). Работает очень медленно (6 токенов в секунду).
-3. `MiniCPM-2.6`. Работает быстрее всего в связи со своим маленьким размером (30 токенов в секунду), но из-за того, какая модель была использована в качестве основы, (а именно Qwen2-7b), "тупее", чем остальные. Но, в отличие от остальных моделей, умеет смотреть на картинки, и зрение у нее почти на уровне GPT-4o.
+As said above, Fi has 3 main models. Specifically:
+1. `Qwen2.5-14b`. This model is near GPT-4o-mini in intellect. Always uses [tools](#tools) correctly, listens to your instructions well and works pretty fast (20 tokens/s).
+2. `QwQ-32b`. This model is near o1-mini. May struggle to use tools, not very confident, but because of the way it thinks, comes to the correct answer more often than model 1. May struggle to understand the question itself, so make it as clear as possible. Slow (6 tokens/s).
+3. `MiniCPM-2.6`. Works faster than every other (30 tokens/s), but because of the model used as the base (Qwen2-7b), its dumber than the rest. But, unlike others, it can see images, and the vision is close to GPT-4o.
 
-Имеется одна дополнительная модель (`Llama-3.2-3b`), которая подключается при использовании модели 2. Она служит только для того, чтобы при поиске чего-то в интернете, вам не приходилось ждать по 5 часов, пока она сформулирует нормальный ответ.
+There's a secondary model (`Llama-3.2-3b`), which is used along with model 2. It's only used to look something up on the web, so you don't have to wait for 5 hours for the model to retrieve an answer.
  
 # Other commands that feature AI
-- `fi image (запрос) / (формат (опциональный))` - генерирует картинку, используя [вот этот](https://huggingface.co/spaces/black-forest-labs/FLUX.1-schnell) спейс и модель Flux.1 Schnell. В запрос вписываете что нужно сгенерировать на английском языке, а в размер - формат в форме X:Y. Имеются лимиты на несколько картинок в час.  
-  Примеры: `fi image cat / 16:9` сгенерирует кошку в формате 16:9, а `fi image dog` сгенерирует собаку в формате 1:1 (1024x1024)
-- `fi web (запрос)` - используя текущую языковую модель, попытается углубленно поискать ответ на ваш вопрос. Отличие от инструмента, которым может пользоваться Фи, в том, что эта команда может занять до 30 минут поиска, т.к будет очень сильно углубляться, пока инструмент займет максимум 5 минут (в среднем 1-2).
 
-Фи также имеет много других команд, не связанных с ИИ (например калькулятор), их вы можете прочекать в `fi help`.
+- `fi image (prompt) / (ratio (optional))` - generates pictures using [this](https://huggingface.co/spaces/black-forest-labs/FLUX.1-schnell) space and Flux.1 Schnell model. In the prompt you say what you need generated. The ratio should be written like X:Y. There are limits to only a couple of pictures an hour.
+  Examples: `fi image cat / 16:9` will generate a picture of a cat in a 16:9 ratio, while `fi image dog` will generate a dog in a 1:1 ratio (1024x1024)
+- `fi web (query)` - using the current LLM, tries to look up the answer to your query by checking a lot of sources. The difference between this and the web search tool is that this may take as long as 30 minutes, while the tool may take up to 5, taking 1-2 on average. The difference comes from the fact that this command checks way more sources than the tool.
+
+Fi has a lot more different commands, unrelated to AI (like the calculator), you can check them in `fi help`.
 
 # Final additions
-Фи - незаконченный проект. Каждый раз кто-то находит какие-то баги. Я их сразу правлю, но если вдруг чо найдете - пишите, пофикшу.
 
-Еще прошу заметить, что из-за того, что я хостчу эту модель на своем компе, периодически я могу либо сами модели выключать, чтобы освободить память, либо сам компьютер. Поэтому, если вдруг она отвечает, что модели выключены, или сама оффлайн - пишите мне. Бронируйте заранее, когда она нужна будет. 😁
+Fi is an unfinished project. Every time someone manages to find a new bug. I fix them quickly, but if you do find something - text me, I'll fix.
 
-Если она отреагировала пальцем вверх на ваше сообщение (👍), то это значит, что кто-то другой у нее что-то спросил, и она отвечает этому человеку. В таком случае просто подождите. Я не могу в параллели обрабатывать несколько запросов, потому, что она начинает нести бред.
+Also, because I host this thing on my PC, I may turn either the models off (to clear memory), or the whole PC. So, if Fi says that the models are off, or is overall offline - text me. Book beforehand if you know you may need Fi in the near future. 😁
 
-И последнее - как уже было упомянуто в доп. возможностях, контекст - 8192. Поэтому через `fi chat` с ней бесконечно не пообщаешься, в какой-то момент она напишет, что все, кина не будет. Это примерно 16 полных сообщений (т.е каждое в 2000 символов)
+If Fi reacted with a thumbsup (👍), it means that someone else asked it something, and it's currently responding. In this case just wait. I can't do multiple queries in parallel, because Fi starts saying nonsense.
+
+And last thing - as I mentioned beforehand, the context is 8192. So you can't really text infinitely in `fi chat`, and at some point it will say that it's over. Its about 16 full messages (2000 characters each).
