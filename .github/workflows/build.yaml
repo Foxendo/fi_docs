@@ -16,8 +16,8 @@ jobs:
           with:
             node-version: 18.x
 
-        - name: Install dependencies
-          run: cd bin/docs-generator && npm i
+        - name: Install dependencies && Build
+          run: cd bin/docs-generator && npm i && npm run generate
 
         - name: Check path
-          run: ls
+          run: cd bin/docs-generator && cd __docs__ && ls
