@@ -24,13 +24,19 @@ Request examples: `Fi, hello!`, `Hi, Fi.` or `@Fi wassup!`
 
 As you can see, the requests are either using a comma, or specifically mention Fi (through @), otherwise it's going to ignore your attempts to chat.
 
+<ol>
 You can also address Fi in two more ways:
-1. By replying to any message of Fi, mentioning it. In this case it will respond regardless of if you wrote "Fi," or not. Also, it will consider the context of the message you replied to.
+<li>1. By replying to any message of Fi, mentioning it. In this case it will respond regardless of if you wrote "Fi," or not. Also, it will consider the context of the message you replied to.
 <img src="assets/example1.png" width="75%" height="75%" align="center"/>
+</li>
 <br clear="both"/>
 
-2. Reply to a message of any person, and mention Fi - either through @Fi, or "Fi,". In this case it will also consider the context of the message you're replying to.
+
+<li>2. Reply to a message of any person, and mention Fi - either through @Fi, or "Fi,". In this case it will also consider the context of the message you're replying to.
 <img src="assets/example2.png" width="75%" height="75%" align="center"/>
+</li>
+</ol>
+
 <br clear="both"/>
 
 > [!NOTE]
