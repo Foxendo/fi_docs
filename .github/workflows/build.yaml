@@ -1,0 +1,23 @@
+name: Build & publish docs
+
+on:
+    push: 
+        branches: "*"
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout repository
+          uses: actions/checkout@v3
+        
+        - uses: actions/setup-node@v3
+          name: Setup node
+          with:
+            node-version: 18.x
+
+        - name: Install dependencies
+          run: cd bin/docs-generator && npm i
+
+        - name: Check path
+          run: ls
