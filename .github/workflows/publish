@@ -1,0 +1,30 @@
+name: Build & publish docs
+
+on:
+    push: 
+        branches: "*"
+
+permissions:
+    pages: write
+
+    
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout repository
+          uses: actions/checkout@v3
+        
+        - uses: actions/setup-node@v3
+          name: Setup node
+          with:
+            node-version: 18.x
+
+        - name: Install dependencies && Build
+          run: cd bin/docs-generator && npm i && npm run generate
+
+        - name: Deploy to Github pages
+          uses: peaceiris/actions-gh-pages@v3
+          with:
+            github_token: ${{secrets.GITHUB_TOKEN}}
+            publish_dir: ./bin/docs-generator/__docs__
