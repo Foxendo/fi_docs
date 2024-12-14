@@ -7,7 +7,7 @@ on:
 permissions:
     pages: write
 
-    
+
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -24,7 +24,7 @@ jobs:
           run: cd bin/docs-generator && npm i && npm run generate
 
         - name: Deploy to Github pages
-          uses: peaceiris/actions-gh-pages@v3
+          uses: JamesIves/github-pages-deploy-action@v4
           with:
-            github_token: ${{secrets.GITHUB_TOKEN}}
-            publish_dir: ./bin/docs-generator/__docs__
+            branch: main
+            folder: ./bin/docs-generator/__docs__
